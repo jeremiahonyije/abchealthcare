@@ -11,7 +11,7 @@ export default function Contact({ report }) {
   useEffect(() => {
     const radiologist = async () => {
       try {
-        const res = await fetch(`/api/user/${report.userRef}`);
+        const res = await fetch(`/server/user/${report.userRef}`);
         const data = await res.json();
         setRadiologist(data);
       } catch (error) {

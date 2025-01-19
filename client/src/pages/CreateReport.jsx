@@ -116,7 +116,7 @@ export default function CreateReport() {
         return setError('You must upload at least one image');
       setLoading(true);
       setError(false);
-      const res = await fetch('/api/report/create', {
+      const res = await fetch('/server/report/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

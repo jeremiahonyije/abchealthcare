@@ -29,9 +29,9 @@ app.listen(3000, () => {
   console.log('Server is running on port 3000!');
 });
 
-app.use('/api/user', userRouter);
-app.use('/api/auth', authRouter);
-app.use('/api/report', reportRouter);
+app.use('/server/user', userRouter);
+app.use('/server/auth', authRouter);
+app.use('/server/report', reportRouter);
 
 app.use(express.static(path.join(__dirname, '/client/dist')));
 

@@ -29,7 +29,7 @@ export default function CreateReport() {
   useEffect(() => {
     const fetchReport = async () => {
       const reportId = params.reportId;
-      const res = await fetch(`/api/report/get/${reportId}`);
+      const res = await fetch(`/server/report/get/${reportId}`);
       const data = await res.json();
       if (data.success === false) {
         console.log(data.message);
@@ -132,7 +132,7 @@ export default function CreateReport() {
         return setError('You must upload at least one image');
       setLoading(true);
       setError(false);
-      const res = await fetch(`/api/report/update/${params.reportId}`, {
+      const res = await fetch(`/server/report/update/${params.reportId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

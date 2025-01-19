@@ -24,7 +24,7 @@ export default function Report() {
     const fetchReport = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`/api/report/get/${params.reportId}`);
+        const res = await fetch(`/server/report/get/${params.reportId}`);
         const data = await res.json();
         if (data.success === false) {
           setError(true);
